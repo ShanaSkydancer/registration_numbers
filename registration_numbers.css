@@ -4,25 +4,49 @@ body {
 }
 
 h1 {
-  margin-top: 1em;
   font-family: 'Jura', sans-serif;
-  font-size: 48px;
+  font-size: 55px;
   text-align: center;
+  background-color: #FFD700
 }
+
+/*h1:before {
+  background-color: #FFD700
+}*/
 
 h1:after {
     content:' ';
     margin-top: 0.5em;
     display:block;
     border:2px solid black;
+    /*position: absolute;
+    makes border go to middle*/
+    /*z-index: -1;
+    top: 2em;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px solid black;*/
 }
 
+/*#header {
+  height: 100%;
+  background-color: #FFD700
+}*/
+
 h2 {
-  margin-left: 1.5em;
+  margin-left: 3.5em;
   margin-top: 2em;
   font-family: 'Jura', sans-serif;
   font-size: 30px;
   text-align: left;
+}
+
+h3 {
+  margin-right: 8em;
+  margin-top: -6.7em;
+  font-family: 'Jura', sans-serif;
+  font-size: 30px;
+  text-align: right;
 }
 
 #regiNumber {
@@ -37,6 +61,10 @@ h2 {
   font-family: 'Jura', sans-serif;
   font-size: 20px;
   color: black
+}
+
+ul {
+  margin-top: 4em;
 }
 
 li {
@@ -54,10 +82,69 @@ li {
   background: #FFD700;
   list-style-type: none;
   margin: 0 0 5px 0;
+  margin-left: 5em;
 }
 
 #fillForm {
   font-family: 'Jura', sans-serif;
   margin: auto;
-  margin-left: 3em;
+  margin-left: 6em;
+}
+
+.ddButton {
+  font-family: 'Jura', sans-serif;
+  font-size: 20px;
+  color: black;
+  background-color:  #4CAF50;
+  color: white;
+  padding: 25px;
+  margin-right: 12em;
+  border: none;
+  cursor: pointer; cursor: hand;
+}
+
+.ddButton:hover, .ddButton:focus {
+  background-color: #2E8B57
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.ddContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'Jura', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.ddContent option {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family: 'Jura', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.ddContent option:hover {
+  background-color: #98FB98
+}
+
+.show {
+  display: block;
+}
+
+#selectedTownOutput {
+  font-family: 'Jura', sans-serif;
+  font-size: 23px;
+  text-align: right;
+  display: block;
 }

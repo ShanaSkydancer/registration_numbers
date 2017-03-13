@@ -1,38 +1,70 @@
 const form = document.getElementById("fillForm");
 const inputRegiNumbers = document.querySelector("#regiNumber");
 var outputRegiNumbers = document.querySelector("#regiNumberOutput");
-var regiListForRegis = document.querySelector("regiOutputList");
+var regiListForRegis = document.querySelector("#regiOutputList");
 var ul = document.querySelector("ul");
 var li = document.createElement("li");
-
-
+var dropDownButt = document.querySelector(".ddButton");
+var ddValues = document.querySelector("#myDropdown");
+var dropdowns = document.querySelector("ddContent");
+var ddSection = document.getElementsByClassName("dropdown");
+var ouputTown = document.getElementById("selectTownOutput");
 
 form.addEventListener("submit", function() {
   event.preventDefault();
-  // outputRegiNumbers.innerHTML = inputRegiNumbers.value;
   li.innerHTML = addRegiNumbers();
 });
 
-
 function addRegiNumbers() {
   var li = document.createElement("li");
-  li.setAttribute("id", "inputRegiNumbers");
-  ul.appendChild(li);
-  li.innerHTML = inputRegiNumbers.value;
+    if (inputRegiNumbers.value !== ""){
+      li.setAttribute("id", "inputRegiNumbers");
+      ul.appendChild(li);
+      li.innerHTML = inputRegiNumbers.value;
+      }
 }
 
-// function addRegiNumbers() {
-//   var regiList = document.createElement("li");
-//   regiList.appendChild(inputRegiNumbers);
-//   document.getElementById("regiNumber").appendChild(regiList);
-// }
+function selectTown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-// regiList.setAttribute("id", outputRegiNumbers);
-// fullRegiList.appendChild("regiList")
+window.onclick = function(event) {
+  if (!event.target.matches('.ddButton')) {
+    var dropdowns = document.getElementsByClassName("ddContent");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 
-// function myFunction() {
-//     var node = document.createElement("LI");
-//     var textnode = document.createTextNode("Water");
-//     node.appendChild(textnode);
-//     document.getElementById("myList").appendChild(node);
-// }
+  ddValues.addEventListener("change", function(){
+    console.log("sss");
+    if (dropdowns.value === "capeTown"){
+      li.startsWith("CA");
+      li.style.display="block";
+      // bell.style.display="hidden";
+      // paarl.style.display="hidden";
+      // li.innerHTML = inputRegiNumbers.value;
+    }
+    else if (dropdowns.value === "bellville"){
+      li.startsWith("CY");
+      li.style.display="block";
+      // paarl.style.display="hidden";
+      // capeT.style.display="hidden";
+      // li.innerHTML = inputRegiNumbers.value;
+    }
+    else if (dropdowns.value === "paarl"){
+      li.startsWith("CJ");
+      li.style.display="block";
+      // capeT.style.display="hidden";
+      // bell.style.display="hidden";
+      // li.innerHTML = inputRegiNumbers.value;
+    }
+    else {
+      li.style.display="hidden";
+    }
+  })
+}

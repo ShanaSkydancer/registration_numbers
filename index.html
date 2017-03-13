@@ -11,6 +11,7 @@
 
     <h1>Registration Number Website</h1>
 
+<div id = "bothSides">
 <div = "leftForm">
     <h2>Registration Number:</h2>
 </div>
@@ -26,10 +27,30 @@
   </br>
 </div>
 
-  <div id = "regiNumberOutput">
-    <ul id = "regiOutputList">
-    </ul>
-  </div>
+  <div id= "RightForm">
+    <h3>Select Town:</h3>
+
+<div class="dropdown">
+  <button onclick="selectTown()" class="ddButton">Select Town</button>
+    <div id="myDropdown" class="ddContent">
+        <option id = "ctOption" value = "capeTown">Cape Town</option>
+        <option id = "bellOption" value = "bellville">Bellville</option>
+        <option id = "pOption" value = "paarl">Paarl</option>
+    </div>
+</div>
+
+<br>
+</br>
+
+<div id = "regiNumberOutput">
+  <ul id = "regiOutputList">
+  </ul>
+</div>
+
+<div id = "selectTownOutput">
+</div>
+
+</div>
 
   </body>
 
