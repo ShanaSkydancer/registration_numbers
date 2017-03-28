@@ -9,10 +9,11 @@ var ddValues = document.querySelector("#myDropdown");
 var dropdowns = document.querySelector("ddContent");
 var ddSection = document.getElementsByClassName("dropdown");
 var ouputTown = document.getElementById("selectTownOutput");
+var ddOptions = document.getElementsByClassName("ddOptions");
 
 form.addEventListener("submit", function() {
   event.preventDefault();
-  li.innerHTML = addRegiNumbers();
+  li.innerHTML = addRegiNumbers()
 });
 
 function addRegiNumbers() {
@@ -24,47 +25,17 @@ function addRegiNumbers() {
       }
 }
 
-function selectTown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches('.ddButton')) {
-    var dropdowns = document.getElementsByClassName("ddContent");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+dropDownButt.addEventListener('change', function() {
+  const currentOption = event.target;
+  const currentOptionID = currentOption.value;
+  var li = ul.getElementsByTagName('li');
+  for(var i = 0; i < li.length; i++){
+    var currentList = li[i].textContent;
+    if(currentOptionID === 'ALL' || currentList.startsWith(currentOptionID)){
+      li[i].style.display = 'block';
     }
-  }
-
-  ddValues.addEventListener("change", function(){
-    console.log("sss");
-    if (dropdowns.value === "capeTown"){
-      li.startsWith("CA");
-      li.style.display="block";
-      // bell.style.display="hidden";
-      // paarl.style.display="hidden";
-      // li.innerHTML = inputRegiNumbers.value;
-    }
-    else if (dropdowns.value === "bellville"){
-      li.startsWith("CY");
-      li.style.display="block";
-      // paarl.style.display="hidden";
-      // capeT.style.display="hidden";
-      // li.innerHTML = inputRegiNumbers.value;
-    }
-    else if (dropdowns.value === "paarl"){
-      li.startsWith("CJ");
-      li.style.display="block";
-      // capeT.style.display="hidden";
-      // bell.style.display="hidden";
-      // li.innerHTML = inputRegiNumbers.value;
-    }
-    else {
-      li.style.display="hidden";
-    }
-  })
-}
+    else{
+      li[i].style.display = 'none';
+    };
+  };
+});

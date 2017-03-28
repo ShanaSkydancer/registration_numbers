@@ -11,8 +11,8 @@
 
     <h1>Registration Number Website</h1>
 
-<div id = "bothSides">
-<div = "leftForm">
+<div id= "bothSides">
+<div id= "leftForm">
     <h2>Registration Number:</h2>
 </div>
 
@@ -31,12 +31,14 @@
     <h3>Select Town:</h3>
 
 <div class="dropdown">
-  <button onclick="selectTown()" class="ddButton">Select Town</button>
+  <select class="ddButton">
     <div id="myDropdown" class="ddContent">
-        <option id = "ctOption" value = "capeTown">Cape Town</option>
-        <option id = "bellOption" value = "bellville">Bellville</option>
-        <option id = "pOption" value = "paarl">Paarl</option>
+        <option class= "ddOptions" value= "ALL">ALL</option>
+        <option class= "ddOptions" value= "CA">Cape Town</option>
+        <option class= "ddOptions" value= "CY">Bellville</option>
+        <option class= "ddOptions" value= "CJ">Paarl</option>
     </div>
+  </select>
 </div>
 
 <br>
