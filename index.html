@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="registration_numbers.css">
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <title>Registration Numbers</title>
-  </head>
-  <body>
 
-    <h1>Registration Number Website</h1>
+<head>
+  <link rel="stylesheet" href="registration_numbers.css">
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <title>Registration Numbers</title>
+</head>
 
-<div id= "bothSides">
-<div id= "leftForm">
-    <h2>Registration Number:</h2>
-</div>
+<body>
 
-<form id="fillForm">
-    <input id="regiNumber" type="text" placeholder="Registration Number..."/>
+  <h1>Registration Number Website</h1>
+
+  <div id="bothSides">
+    <div id="leftForm">
+      <h2>Registration Number:</h2>
+    </div>
+
+    <form id="fillForm">
+      <input id="regiNumber" type="text" placeholder="Registration Number..." />
       <br>
       </br>
       <button id="regiButton" type="submit">ADD</button>
 
-</form>
+    </form>
     <br>
-  </br>
-</div>
+    </br>
+  </div>
 
-  <div id= "RightForm">
+  <div id="RightForm">
     <h3>Select Town:</h3>
 
-<div class="dropdown">
-  <select class="ddButton">
+    <div class="dropdown">
+      <select class="ddButton">
     <div id="myDropdown" class="ddContent">
         <option class= "ddOptions" value= "ALL">ALL</option>
         <option class= "ddOptions" value= "CA">Cape Town</option>
@@ -39,23 +41,23 @@
         <option class= "ddOptions" value= "CJ">Paarl</option>
     </div>
   </select>
-</div>
+    </div>
 
-<br>
-</br>
+    <br>
+    </br>
 
-<div id = "regiNumberOutput">
-  <ul id = "regiOutputList">
-  </ul>
-</div>
+    <div id="regiNumberOutput">
+      <ul id="regiOutputList">
+      </ul>
+    </div>
 
-<div id = "selectTownOutput">
-</div>
+    <div id="selectTownOutput">
+    </div>
 
-</div>
+  </div>
 
-  </body>
+</body>
 
-  <script src="registration_numbers.js" charset="utf-8"></script>
+<script src="main.js" charset="utf-8"></script>
 
 </html>
